@@ -1,0 +1,9 @@
+---
+- name: set START_RANGE_HOURS
+  lineinfile:
+    dest: /etc/anacrontab
+    line: "START_HOURS_RANGE={{ anacron_start_hours_range }}"
+    regexp: '^START_HOURS_RANGE='
+    owner: root
+    group: root
+    mode: 0600
